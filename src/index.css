@@ -136,3 +136,13 @@ header {
   padding: 10px;
 }
 
+
+/* Alert */
+
+.alert {
+  background-color: rgb(43, 165, 74);
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+

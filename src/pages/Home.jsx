@@ -1,9 +1,9 @@
 import {useState} from "react"
-import { useNavigate, useParams, NavLink} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { useAlertContext } from "../contexts/AlertContext"
 
-function Home() {
-    // const {id} = useParams()
+function Home() {   
     const navigate = useNavigate()
 
    const initialFormData = {
@@ -13,9 +13,12 @@ function Home() {
         public: false,
     }
 
+    
+
     // Definisco gli stati
     const [formData, setFormData] = useState(initialFormData)
-    const [showAlert,  setShowAlert] = useState(false)
+    // const [showAlert,  setShowAlert] = useState(false)
+    const { setShowAlert } = useAlertContext()
 
 
     // Gestione modifiche al form
@@ -38,19 +41,14 @@ function Home() {
                 console.log(resp)
                     if(resp.data.id) {
                         setFormData(initialFormData)
-                        navigate(`/posts/${resp.data.id}`);
-                        setTimeout(() => {
-                            setShowAlert(true);
-
-                        },4000);
-                    } else {
+                        setShowAlert(true);                        
                         setTimeout(() => {
                             setShowAlert(false);
 
                         },4000);
 
                     }
-            })
+                });
     };
 
 
@@ -60,12 +58,6 @@ function Home() {
                     <h1 className="my-p">Home</h1>
                     <h3 className="m-bottom-40">Crea il tuo post</h3>
                     <div className="card">
-                        <div>
-                                {showAlert && (
-                                    <div className="alert alert-success">
-                                        Dati inviati correttamente
-                                    </div>
-                                    )}
                             <form 
                             onSubmit={sendData}>
 
@@ -116,7 +108,6 @@ function Home() {
 
                             <button type="submit" className="button">Inserisci</button>
                             </form>
-                        </div>
                     </div>
                 </div>
         </>

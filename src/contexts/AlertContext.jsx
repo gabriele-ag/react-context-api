@@ -1,6 +1,6 @@
-import {createContext, useContext, useState} from "react"
+import {createContext, useContext, useState} from "react";
 
-const AlertContext = createContext()
+const AlertContext = createContext();
 
 const AlertProvider = ({children}) => {
     const [showAlert, setShowAlert] = useState(false);
@@ -16,8 +16,8 @@ const AlertProvider = ({children}) => {
 }
 
 const useAlertContext = () => {
-        return useContext(AlertContext)
-    }
+    return useContext(AlertContext);
+};
 
 
-export {AlertProvider, useAlertContext}
+export {AlertProvider, useAlertContext};
