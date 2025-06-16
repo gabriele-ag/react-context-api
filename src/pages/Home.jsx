@@ -56,11 +56,11 @@ function Home() {
 
     return (
         <>
-                <div className="container my-4">
+                <div className="container">
                     <h1 className="my-p">Home</h1>
                     <h3 className="m-bottom-40">Crea il tuo post</h3>
                     <div className="card">
-                        <div className="card-body">
+                        <div>
                                 {showAlert && (
                                     <div className="alert alert-success">
                                         Dati inviati correttamente
@@ -69,40 +69,43 @@ function Home() {
                             <form 
                             onSubmit={sendData}>
 
-                            <div className="mb-3">
+                            <div>
                                 <label 
                                 htmlFor="" 
-                                className="form-label">Inserisci l'autore</label>
+                                className="flex">Inserisci l'autore</label>
                                 <input 
-                                type="text" 
+                                type="text"
+                                className="inputCreate m-bottom-20" 
                                 aria-describedby="author"
                                 name="author"
                                 value={formData.author}
                                 onChange={handleChange}/>      
                             </div>
 
-                            <div className="mb-3">
-                                <label htmlFor="" className="form-label">Inserisci titolo del post</label>
+                            <div>
+                                <label htmlFor="" className="flex">Inserisci titolo del post</label>
                                 <input 
                                 type="text"
                                 name="title"
+                                className="inputCreate m-bottom-20"
                                 aria-describedby="title-post"
                                 value={formData.title}
                                 onChange={handleChange}/>
                             </div>
 
-                            <div className="mb-3">
-                                <label htmlFor="textforpost" className="form-label">Inserisci testo del post</label>
+                            <div>
+                                <label htmlFor="textforpost" className="flex">Inserisci testo del post</label>
                                 <textarea 
                                 type="text"
                                 name="body"
                                 aria-describedby="body-post"
+                                className="inputCreate m-bottom-20"
                                 onChange={handleChange}
                                 value={formData.body}/>
                             </div>
 
                             <div>
-                                <label htmlFor="" className="form-label">Publica?</label>
+                                <label htmlFor="" className="form-label m-right-20">Vuoi rendere pubblico il tuo post?</label>
                                 <input 
                                 type="checkbox"
                                 name="public"
@@ -111,7 +114,7 @@ function Home() {
                                 checked={formData.public}/>
                             </div>
 
-                            <button type="submit" className="btn btn-primary">Inserisci</button>
+                            <button type="submit" className="button">Inserisci</button>
                             </form>
                         </div>
                     </div>

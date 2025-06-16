@@ -38,7 +38,7 @@ function ShowPost() {
                             <h1 className="m-bottom-20">{post.title}</h1>
                             <p>{post.body}</p>
                         </div>
-                        <Link className="buttonDetails" to={`/posts`}>Torna indietro</Link>
+                        <Link className="button" to={`/posts`}>Torna indietro</Link>
                     </div>                 
                 )}
             </div>

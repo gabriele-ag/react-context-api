@@ -18,7 +18,7 @@ function ListPost() {
                             <div className="card">
                                 <h3 className="m-bottom-20">{curPost.title}</h3>
                                 <p className="m-bottom-40">{curPost.body}</p>
-                                <Link className="buttonDetails" to={`/posts/${curPost.id}`}>Dettagli</Link>
+                                <Link className="button" to={`/posts/${curPost.id}`}>Dettagli</Link>
                             </div>
                         </li>
                     ))}
