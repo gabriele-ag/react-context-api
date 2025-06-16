@@ -5,12 +5,17 @@ import ListPost from "./pages/ListPost"
 import ShowPost from "./pages/showPost"
 import GuestLayout from "./layouts/GuestLayout"
 import Page404 from "./pages/Page404"
+import { PostListContext, usePosts } from "./contexts/PostListContext"
+
 
 
 function App() {
+  const { postList } = usePosts()
+
 
   return (
     <>
+    <PostListContext.Provider value={{postList}}>
       <BrowserRouter>
         <Routes>
           <Route element={<GuestLayout/>}>
@@ -22,6 +27,7 @@ function App() {
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
+    </PostListContext.Provider>
     </>
   )
 }

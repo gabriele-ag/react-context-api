@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react"
-import { Link} from "react-router-dom"
-import axios from "axios"
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { PostListContext } from "../contexts/PostListContext"
 
 
 function ListPost() {
-    const [postList, setNewList] = useState([])
 
-
-    const apiUrl = "https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts"
-
-    useEffect(() => {
-        axios
-            .get(apiUrl)
-            .then((resp) => {
-                const postData = resp.data
-                setNewList(postData)
-                console.log(postData)
-            })
-    }, [])
-
+    const {postList} = useContext(PostListContext)
 
     return (
 
