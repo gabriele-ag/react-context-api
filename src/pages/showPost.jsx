@@ -1,6 +1,7 @@
-import {useParams, useNavigate} from "react-router-dom"
+import {useParams, useNavigate, Link} from "react-router-dom"
 import {useEffect, useState} from "react"
 import axios from "axios"
+import AppLoader from "../components/AppLoader"
 
 
 function ShowPost() {
@@ -30,11 +31,14 @@ function ShowPost() {
         <main>
             <div>
                {post === null ? (
-                    <h1>Caricamento...</h1>
+                    <AppLoader/>
                 ) : (
-                    <div>
-                        <h1>{post.title}</h1>
-                        <p>{post.body}</p>
+                    <div className="container my-p">
+                        <div className="card">
+                            <h1 className="m-bottom-20">{post.title}</h1>
+                            <p>{post.body}</p>
+                        </div>
+                        <Link className="buttonDetails" to={`/posts`}>Torna indietro</Link>
                     </div>                 
                 )}
             </div>

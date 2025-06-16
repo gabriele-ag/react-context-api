@@ -24,10 +24,23 @@ a {
   text-decoration: none;
 }
 
+.loader {
+  text-align: center;
+}
+
 /* Utilities */
 
 .my-p {
   padding: 40px 0;
+}
+
+
+.m-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.m-bottom-40 {
+  margin-bottom: 40px;
 }
 
 /* Body */
@@ -60,13 +73,25 @@ header {
 }
 
 /* MAIN */
+
+/* Home */
+
 /* card-ListPost */
 
 .card {
-    padding: 15px;
+    padding: 30px;
     height: 300px;
-    border: 1px solid black;
-    margin-bottom: 20px;
-    background-color: rgb(252, 248, 230);
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    
+}
+
+.buttonDetails {
+  background-color: rgb(55, 55, 247);
+  color: #ffffff;
+  padding: 10px;
+  border: 1px solid rgb(55, 55, 247);
+  border-radius: 10px;
 }
 

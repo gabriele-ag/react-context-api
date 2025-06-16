@@ -10,15 +10,15 @@ function ListPost() {
     return (
 
         <div className="container my-p">
-            <h1>List Posts</h1>
+            <h1 className="m-bottom-40">List Posts</h1>
             <div>
                 <ul>
                     {postList.map((curPost, index) => (
                         <li key={index}>
                             <div className="card">
-                                <h3>{curPost.title}</h3>
-                                <p>{curPost.body}</p>
-                                <Link to={`/posts/${curPost.id}`}>Dettagli</Link>
+                                <h3 className="m-bottom-20">{curPost.title}</h3>
+                                <p className="m-bottom-40">{curPost.body}</p>
+                                <Link className="buttonDetails" to={`/posts/${curPost.id}`}>Dettagli</Link>
                             </div>
                         </li>
                     ))}

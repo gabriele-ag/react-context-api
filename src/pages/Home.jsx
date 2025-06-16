@@ -57,8 +57,8 @@ function Home() {
     return (
         <>
                 <div className="container my-4">
-                    <h1>Home</h1>
-                    <h3>Crea il tuo post</h3>
+                    <h1 className="my-p">Home</h1>
+                    <h3 className="m-bottom-40">Crea il tuo post</h3>
                     <div className="card">
                         <div className="card-body">
                                 {showAlert && (

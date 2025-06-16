@@ -6,15 +6,19 @@ import ShowPost from "./pages/showPost"
 import GuestLayout from "./layouts/GuestLayout"
 import Page404 from "./pages/Page404"
 import { PostListContext, usePosts } from "./contexts/PostListContext"
+// import {AlertProvider} from "./contexts/AlertContext"
 
 
 
 function App() {
+
+
   const { postList } = usePosts()
 
 
   return (
     <>
+    
     <PostListContext.Provider value={{postList}}>
       <BrowserRouter>
         <Routes>
@@ -28,6 +32,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </PostListContext.Provider>
+    
     </>
   )
 }
