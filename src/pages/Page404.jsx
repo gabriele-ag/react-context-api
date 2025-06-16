@@ -5,11 +5,11 @@ const navigate = useNavigate()
 
     return (
         <main>
-            <section>
-                <h1>404 Pagina non trovata</h1>
+            <section className="flex flex-column-center">
+                <h1 className="notfoundTitle m-bottom-40">404 Pagina non trovata</h1>
                 <div>
-                    <Link to="/posts">Torna alla pagina dei Post</Link>
-                    <Link onClick={(event) => {
+                    <Link className="backToPost" to="/posts">Torna alla pagina dei Post</Link>
+                    <Link className="backToHome" onClick={(event) => {
                         event.preventDefault();
                         navigate("/")
                     }}

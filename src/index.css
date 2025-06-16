@@ -47,6 +47,11 @@ a {
   margin-right: 20px;
 }
 
+.flex-column-center {
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Body */
 
 body {
@@ -102,5 +107,32 @@ header {
   padding: 10px;
   border: 1px solid rgb(55, 55, 247);
   border-radius: 10px;
+}
+
+
+
+
+/* 404 NOT FOUND */
+
+.notfoundTitle {
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+.backToPost {
+  background-color: rgb(43, 165, 74);
+  color: #ffffff;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.backToHome {
+  background-color: rgb(238, 154, 45);
+  color: #ffffff;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
 }
 
